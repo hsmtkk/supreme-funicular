@@ -1,0 +1,13 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: demo
+    image: hsmtkk/supreme-funicular:latest
+    commands:
+      - supreme-funicular
+    environment:
+      INCOMING_WEBHOOK_URL:
+        from_secret: incoming-webhook-url
